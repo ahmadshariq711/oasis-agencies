@@ -1,0 +1,173 @@
+/*
+Pallete Colours: 1 is darkest, 5 is lightest
+
+Green Palette:
+    --1: #22577a;
+    --2: #38a3a5;
+    --3: #57cc99;
+    --4: #80ed99;
+    --5: #c7f9cc;
+Blue Palette:
+    --1: #0d1b2a;
+    --2: #1b263b;
+    --3: #415a77;
+    --4: #778da9;
+    --5: #e0e1dd;
+*/
+
+:root {
+    --1: #0d1b2a;
+    --2: #1b263b;
+    --3: #415a77;
+    --4: #778da9;
+    --5: #e0e1dd;
+    --6: #f66d3a;
+}
+
+body {
+    background-color: var(--2);
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1.5s ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+}
+
+a img {
+    width: 50px;
+}
+
+h1 {
+    font-size: 100px;
+    background: linear-gradient(to right, #6b0aac, #6d78da, #23cf8d,  #039759); 
+    -webkit-text-fill-color: transparent; 
+    -webkit-background-clip: text; 
+    background-clip: text;
+}
+
+h3 {
+    color: var(--5);
+}
+
+p {
+    color: var(--5);
+    font-size: 30px;
+}
+
+button {
+    background-color: var(--6) !important;
+}
+
+.navbar-collapse {
+    text-align: center;
+}
+
+.navbar-toggler {
+    background-color: var(--4) !important;
+}
+
+.navbar {
+    background-color: var(--1);
+}
+
+.navbar a {
+    color: var(--5);
+}
+
+.navbar a:hover {
+    color: var(--4);
+}
+
+#hero {
+    background-color: var(--2);
+    padding: 15%; 
+    padding-bottom: 20%;
+}
+
+#about {
+    background-color: var(--2);
+}
+
+#faqs {
+    background-color: var(--2);
+    text-align: center;
+}
+
+#faqs button {
+    background-color: var(--4) !important;
+    color: black !important;
+}
+
+#pricing {
+    background-color: var(--2);
+    text-align: center;
+}
+
+#contact {
+    background-color: var(--2);
+    text-align: center;
+}
+
+#footer {
+    background-color: var(--1);
+    text-align: center;
+}
+
+#footer p {
+    font-size: 20px;
+}
+
+.price {
+    font-size: 20px;
+}
+
+.desc {
+    font-size: 15px;
+}
+
+form {
+    display: inline-block; 
+    width: 60%;
+}
+
+.media-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    transition: 0.3s ease;
+}
+
+.media-icons a {
+    position: relative;
+    color: antiquewhite;
+    font-size: 25px;
+}
+
+.media-icons a:not(:last-child) {
+    margin-right: 60px;
+}
+
+.media-icons a:hover {
+    transform: scale(1.5);
+    color: var(--5);
+    transition: 0.3s ease-out;
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 50px;
+    }
+    #hero {
+        padding-top: 50%; 
+        padding-bottom: 70%;
+     }
+    p {
+        text-align: center;
+        font-size: 20px;
+    }
+}
