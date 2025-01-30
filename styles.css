@@ -16,12 +16,11 @@ Blue Palette:
 */
 
 :root {
-    --1: #0d1b2a;
-    --2: #1b263b;
-    --3: #415a77;
-    --4: #778da9;
-    --5: #e0e1dd;
+    --1: #000;
+    --2: #000;
+    --5: #fff;
     --6: #f66d3a;
+    --7: #282835;
 }
 
 body {
@@ -67,7 +66,7 @@ button {
 }
 
 .navbar-toggler {
-    background-color: var(--4) !important;
+    background-color: var(--1) !important;
 }
 
 .navbar {
@@ -79,7 +78,12 @@ button {
 }
 
 .navbar a:hover {
-    color: var(--4);
+    color: var(--7);
+}
+
+.card {
+    background-color: var(--7);
+    color: var(--5);
 }
 
 #hero {
@@ -98,7 +102,7 @@ button {
 }
 
 #faqs button {
-    background-color: var(--4) !important;
+    background-color: var(--1) !important;
     color: black !important;
 }
 
@@ -142,9 +146,17 @@ form {
     transition: 0.3s ease;
 }
 
+.media-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    transition: 0.3s ease;
+}
+
 .media-icons a {
     position: relative;
-    color: antiquewhite;
+    color: #7e7e91;
     font-size: 25px;
 }
 
@@ -154,8 +166,23 @@ form {
 
 .media-icons a:hover {
     transform: scale(1.5);
-    color: var(--5);
+    color: #fff;
     transition: 0.3s ease-out;
+}
+
+.fLink {
+    color: #7e7e91;
+}
+
+.fLink:hover {
+    color: #fff;
+}
+
+footer {
+    padding: 10px;
+    
+    text-align: center;
+    color: white;
 }
 
 @media (max-width: 480px) {
