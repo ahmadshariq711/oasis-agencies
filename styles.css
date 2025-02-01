@@ -1,30 +1,337 @@
-/*
-Pallete Colours: 1 is darkest, 5 is lightest
-
-Green Palette:
-    --1: #22577a;
-    --2: #38a3a5;
-    --3: #57cc99;
-    --4: #80ed99;
-    --5: #c7f9cc;
-Blue Palette:
-    --1: #0d1b2a;
-    --2: #1b263b;
-    --3: #415a77;
-    --4: #778da9;
-    --5: #e0e1dd;
-*/
-
-:root {
-    --1: #000;
-    --2: #000;
-    --5: #fff;
-    --6: #f66d3a;
-    --7: #282835;
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    color: #AAAAAA;
+    overflow-x: hidden;
 }
 
-body {
-    background-color: var(--2);
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #6c5ce7;
+}
+
+p {
+    color: #AAAAAA;
+}
+
+a {
+    text-decoration: none;
+    color: #6c5ce7;
+}
+
+a:hover {
+    color: #C7b8ea;
+}
+
+/* Hero Section */
+#hero {
+    background-image: url('./oasis.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 100px 0;
+    height: 100vh;
+}
+
+
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background: #6c5ce7;
+    color: #FFFFFF;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #7A288A;
+}
+
+/* Experience & Expertise Section */
+#experience {
+    background: linear-gradient(to bottom, #0B0B0B, #141414);
+    color: #FFFFFF;
+    padding: 80px 0;
+}
+
+#experience .container {
+    text-align: center;
+}
+
+#experience h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+#experience p {
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+}
+
+.statistics {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.stat-block {
+    text-align: center;
+}
+
+.stat-block i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.stat-block h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.stat-block p {
+    font-size: 1.2rem;
+}
+
+/* Free Quotation Section */
+#quotation {
+    background: #3B0B59;
+    color: #FFFFFF;
+    padding: 80px 0;
+    text-align: center;
+}
+
+#quotation h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+#quotation p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Customer Reviews Section */
+#reviews {
+    background: #000000;
+    color: #FFFFFF;
+    padding: 80px 0;
+    text-align: center;
+}
+
+#reviews h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.review-carousel {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.review {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background: #141414;
+    border-radius: 5px;
+}
+
+.review p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.client-info {
+    font-size: 1rem;
+    color: #444444;
+}
+
+/* Past Work/Portfolio Section */
+#portfolio {
+    background: #000000;
+    color: #FFFFFF;
+    padding: 80px 0;
+}
+
+#portfolio h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.portfolio-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    position: relative;
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #FFFFFF;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.view-more {
+    background: #6c5ce7;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.view-more:hover {
+    background: #7A288A;
+}
+
+/* Contact Form & Social Links (Footer) */
+#contact {
+    background: #141414;
+    color: #FFFFFF;
+    padding: 80px 0;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#contact label {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+#contact input, #contact textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #444444;
+    border-radius: 5px;
+    background: #222222;
+    color: #FFFFFF;
+}
+
+#contact button {
+    background: #6c5ce7;
+    color: #FFFFFF;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background 0.3s ease;
+}
+
+#contact button:hover {
+    background: #7A288A;
+}
+
+.social-links {
+    margin-top: 50px;
+}
+
+.social-icon {
+    color: #6c5ce7;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #c7b8ea;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #hero {
+        background-image: url('./oasis-mobile2.png');
+        background-size: 100vh;
+        height: 100vh;
+    }
+    .container {
+        padding: 10px;
+    }
+
+    .statistics {
+        flex-direction: column;
+    }
+
+    .portfolio-grid {
+        flex-direction: column;
+    }
+
+    .review-carousel {
+        flex-direction: column;
+    }
 }
 
 .fade-in {
@@ -36,165 +343,16 @@ body {
     opacity: 1;
 }
 
-a img {
-    width: 50px;
-}
-
-h1 {
-    font-size: 100px;
-    background: linear-gradient(to right, #6b0aac, #6d78da, #23cf8d,  #039759); 
-    -webkit-text-fill-color: transparent; 
-    -webkit-background-clip: text; 
-    background-clip: text;
-}
-
-h3 {
-    color: var(--5);
-}
-
-p {
-    color: var(--5);
-    font-size: 25px;
-}
-
-button {
-    background-color: var(--6) !important;
-}
-
-.navbar-collapse {
-    text-align: center;
-}
-
-.navbar-toggler {
-    background-color: var(--1) !important;
-}
-
-.navbar {
-    background-color: var(--1);
-}
-
-.navbar a {
-    color: var(--5);
-}
-
-.navbar a:hover {
-    color: var(--7);
-}
-
-.card {
-    background-color: var(--7);
-    color: var(--5);
-}
-
-#hero {
-    background-color: var(--2);
-    padding: 15%; 
-    padding-bottom: 20%;
-}
-
-#about {
-    background-color: var(--2);
-}
-
-#faqs {
-    background-color: var(--2);
-    text-align: center;
-}
-
-#faqs button {
-    background-color: var(--1) !important;
-    color: black !important;
-}
-
-#pricing {
-    background-color: var(--2);
-    text-align: center;
-}
-
-#contact {
-    background-color: var(--2);
-    text-align: center;
-}
-
-#footer {
-    background-color: var(--1);
-    text-align: center;
-}
-
-#footer p {
-    font-size: 20px;
-}
-
-.price {
-    font-size: 20px;
-}
-
-.desc {
-    font-size: 15px;
-}
-
-form {
-    display: inline-block; 
-    width: 60%;
-}
-
-.media-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    transition: 0.3s ease;
-}
-
-.media-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    transition: 0.3s ease;
-}
-
-.media-icons a {
+.hidden {
     position: relative;
-    color: #7e7e91;
-    font-size: 25px;
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
 }
 
-.media-icons a:not(:last-child) {
-    margin-right: 60px;
-}
-
-.media-icons a:hover {
-    transform: scale(1.5);
-    color: #fff;
-    transition: 0.3s ease-out;
-}
-
-.fLink {
-    color: #7e7e91;
-}
-
-.fLink:hover {
-    color: #fff;
-}
-
-footer {
-    padding: 10px;
-    
-    text-align: center;
-    color: white;
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 50px;
-    }
-    #hero {
-        padding-top: 50%; 
-        padding-bottom: 70%;
-     }
-    p {
-        text-align: center;
-        font-size: 20px;
-    }
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0%);
 }

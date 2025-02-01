@@ -1,8 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
-    let cta = document.getElementById("CTA");
-    cta.onclick = () => {
-        document.getElementById("contact").scrollIntoView();
-    };
+document.addEventListener('DOMContentLoaded', function() {
+    //Mail Button
     let mail = document.getElementById("mail");
     mail.onclick = () => {
         let address = "info@oasis-agencies.com"
@@ -10,9 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Copied email to clipboard");
     };
 
-    const appearOptions = {
-        
-    };
+    //Fade In animation
+    const appearOptions = {};
     
     const faders = document.querySelectorAll(".fade-in");
 
@@ -20,10 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
         entries.forEach(entry => {
             if (!entry.isIntersecting)
             {
-                console.log("Line 20");
                 return;
             } else {
-                console.log("Line 23");
                 entry.target.classList.add('appear');
                 appearOnScroll.unobserve(entry.target);
             }
@@ -32,5 +26,35 @@ document.addEventListener("DOMContentLoaded", () => {
     
     faders.forEach(fader => {
         appearOnScroll.observe(fader);
+    });
+
+    //Slide In animation
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry)=>{
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+            else {
+                entry.target.classList.remove("show");
+            }
+        });
+    });
+    
+    const hiddenElements = document.querySelectorAll(".hidden");
+    hiddenElements.forEach((el) => observer.observe(el));
+
+    // Smooth Scroll for Links
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
     });
 });
